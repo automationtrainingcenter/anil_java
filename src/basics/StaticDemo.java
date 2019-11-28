@@ -16,9 +16,9 @@ public class StaticDemo {
 		StaticDemo s2 = new StaticDemo();
 		StaticDemo s3 = new StaticDemo();
 		
-		s1.display();
-		s2.display();
-		s3.display();
+		s1.display(); // i = 1	j = 1
+		s2.display(); // i = 1	j = 2
+		s3.display(); // i = 1	j = 3
 	}
 
 }
