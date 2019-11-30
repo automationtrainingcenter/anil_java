@@ -118,6 +118,50 @@ public class DataTypesDemo {
 		System.out.println("size of double in bytes is "+Double.BYTES);
 		System.out.println("**************************************************");
 		
+		// type casting
+		// up casting
+		short shLow = 12345;
+		int iHigh;
+		iHigh = shLow;
+		System.out.println("iHigh = "+iHigh);
+		
+		// down casting
+		// lower-type-var-name = (lower_type) higher_type_var_name
+		short shHigh = 400;
+		byte byLow;
+		byLow = (byte) shHigh;
+		System.out.println("byLow = "+byLow);
+		
+		
+		// primitive to wrapper conversion boxing
+		int ip = 123;
+		Integer iw = Integer.valueOf(ip);
+		
+		// wrapper to primitive conversion unboxing
+		Float fw = 12.2f;
+		float fp = fw.floatValue();
+		
+		// primitive to reference (string)
+		int inp = 123456;
+		String i2s = Integer.toString(inp);
+		System.out.println(i2s+10);
+		
+		double dp = 9.8;
+		String d2s = Double.toString(dp);
+		System.out.println(d2s+10);
+
+		
+		
+		// reference (string) to primitive
+		String s1 = "456321";
+		int s2i = Integer.parseInt(s1);
+		System.out.println(s2i+10);
+		
+		String s2 = "98.876";
+		float s2f = Float.parseFloat(s2);
+		System.out.println(s2f+10);
+		
+		
 	}
 
 }
