@@ -133,7 +133,7 @@ public class Operators {
 		b = a++;
 		System.out.println("a : " + a + "\tb : " + b);
 		/*
-		 * pre increment: a = ++b > a = b+1 and b = b+1 increase right operand value by
+		 * pre increment: a = ++b > b = b+1 and a = b increase right operand value by
 		 * 1 and assign that value to left operand
 		 */
 		b = ++a;
@@ -145,7 +145,7 @@ public class Operators {
 		b = a--;
 		System.out.println("a : " + a + "\tb : " + b);
 		/*
-		 * pre decrement: a = --b > a = b-1 and b = b-1 decrease right operand value by
+		 * pre decrement: a = --b > b = b-1 and a = b decrease right operand value by
 		 * 1 and assign that value to left operand
 		 */
 		b = --a;
