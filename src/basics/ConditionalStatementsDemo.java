@@ -168,6 +168,56 @@ public class ConditionalStatementsDemo {
 		default:
 			System.out.println("launching Internet explorer browser");
 		}
+
+		// chess game level scenario
+		System.out.println("select a level either 1 or 2 or 3");
+		int level = sc.nextInt();
+		if (level == 1) {
+			System.out.println("instructions");
+			System.out.println("tips");
+			System.out.println("launching game in easy mode");
+		} else if (level == 2) {
+			System.out.println("tips");
+			System.out.println("launching game in moderate mode");
+		} else if (level == 3) {
+			System.out.println("launhing game in hard mode");
+		} else {
+			System.out.println("invalid level selection");
+		}
+		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+		// using switch case
+		switch (level) {
+		case 1:
+			System.out.println("instructions");
+			System.out.println("tips");
+			System.out.println("launching game in easy mode");
+			break;
+		case 2:
+			System.out.println("tips");
+			System.out.println("launching game in moderate mode");
+			break;
+		case 3:
+			System.out.println("launhing game in hard mode");
+			break;
+		default:
+			System.out.println("invalid level selection");
+
+		}
+		
+		
+		// score and medals scenario
+		System.out.println("enter the score you got");
+		int score = sc.nextInt();
+		if(score <= 500) {
+			System.out.println("Keep Playing......");
+		}else if(score <= 1000) {
+			System.out.println("bronze medal");
+		}else if(score <= 1500) {
+			System.out.println("silver medal");
+		}else {
+			System.out.println("gold medal");
+		}
+
 	}
 
 }
