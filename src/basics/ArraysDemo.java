@@ -60,12 +60,17 @@ public class ArraysDemo {
 //		marks[6] = 9;
 
 		// retrieve the values from 1D array
-		System.out.println(marks[0]);
-		System.out.println(marks[1]);
-		System.out.println(marks[2]);
-		System.out.println(marks[3]);
-		System.out.println(marks[4]);
-		System.out.println(marks[5]);
+//		System.out.println(marks[0]);
+//		System.out.println(marks[1]);
+//		System.out.println(marks[2]);
+//		System.out.println(marks[3]);
+//		System.out.println(marks[4]);
+//		System.out.println(marks[5]);
+		
+		// retrieving data using normal for loop
+		for(int i = 0; i<marks.length; i++) {
+			System.out.println(marks[i]);
+		}
 
 		// initialize a 1D array
 		char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
@@ -74,11 +79,18 @@ public class ArraysDemo {
 		System.out.println("length of the vowels array is " + vowels.length);
 
 		// retrieve the values from the vowels array
-		System.out.println(vowels[0]);
-		System.out.println(vowels[1]);
-		System.out.println(vowels[2]);
-		System.out.println(vowels[3]);
-		System.out.println(vowels[4]);
+//		System.out.println(vowels[0]);
+//		System.out.println(vowels[1]);
+//		System.out.println(vowels[2]);
+//		System.out.println(vowels[3]);
+//		System.out.println(vowels[4]);
+		
+		// retrieving values using for each loop
+		for(char vowel : vowels) {
+			System.out.println(vowel);
+		}
+		
+		
 
 		// declaring a 2D array
 		int[][] m1 = new int[3][2];

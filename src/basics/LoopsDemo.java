@@ -53,9 +53,90 @@ package basics;
  *}
  *
  *the minimum number of iterations in while loop is 0
+ *
+ *
+ *break statement: it will terminate the loop without executing any statements in that iteration and
+ *also next iterations
+ *
+ *continue statement: it will skip current iteration and executes next iteration. i.e. once
+ *continue statement executed it won't execute any statements with in that iteration but executes
+ *next iterations
  */
 
 public class LoopsDemo {
-	
+
+	public static void main(String[] args) {
+		// print numbers from 1 to 10
+		// while loop
+		// initialization
+		int i = 1;
+		// condition
+		while (i <= 10) {
+			System.out.println(i);
+			i++; // increment
+		}
+
+		System.out.println("*****************************************");
+		// print even numbers from 20 to 10
+		// do while loop
+		int j = 20;
+		do {
+			if (j % 2 == 0) {
+				System.out.println(j);
+			}
+			j--;
+		} while (j > 10);
+		System.out.println("*****************************************");
+
+		// print first 10 3 multiples
+		// for loop
+		for (int k = 1; k < 11; k++) {
+			System.out.println(k + " * 3 = " + k * 3);
+		}
+		System.out.println("*****************************************");
+
+		// for each loop using an array
+		char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+		for (char var : vowels) {
+			System.out.println(var);
+		}
+
+		System.out.println("*****************************************");
+		// break statement
+		for (int l = 0; l <= 10; l++) {
+			if (l == 5) {
+				break;
+			}
+			System.out.println(l);
+		}
+
+		System.out.println("*****************************************");
+		// continue statement
+		for (int l = 0; l <= 10; l++) {
+			if (l % 2 == 1) {
+				continue;
+			}
+			System.out.println(l);
+		}
+		
+		// prime number
+		int number = 111;
+		boolean isPrime = true;
+		for(int p = 2; p < number; p++) {
+			if(number % p == 0) {
+				System.out.println("number is divisible by "+p);
+				isPrime = false;
+				break;
+			}
+		}
+		if(isPrime) {
+			System.out.println("number is prime");
+		}else {
+			System.out.println("numbrer is not prime");
+		}
+		
+		
+		
+	}
 
 }
