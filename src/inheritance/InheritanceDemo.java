@@ -34,11 +34,36 @@ public class InheritanceDemo {
 //		Parent pObj = new Parent();
 //		pObj.methodOne();
 //		
-//		
+//		// single inheritance
 //		// create ChildOne class object
 		ChildOne c1Obj = new ChildOne();
 		c1Obj.methodOne(); // Parent
 		c1Obj.methodTwo(); // ChildOne
+		
+		
+		// multilevel inheritance Parent -> ChildOne -> SubChild
+		SubChild scObj = new SubChild();
+		scObj.methodOne(); // Parent
+		scObj.methodTwo(); // ChildOne
+		scObj.methodThree(); // SubChild
+		
+		
+		// hierarchical inheritance
+		ChildTwo c2Obj = new ChildTwo();
+		c2Obj.methodOne();// Parent
+		c2Obj.methodFour();// ChildTwo
+//		c2Obj.methodTwo(); // ChildOne can't be accessed by using ChildTwo object
+		
+		
+		// object creation to child class and object reference to the parent class
+		Parent pcObj = new ChildOne();
+		pcObj.methodOne();
+		// to access child class method using parent class object reference we have
+		// to type cast Parent class object reference to Child class object reference
+		ChildOne cObj = (ChildOne) pcObj;
+		cObj.methodTwo();
+		cObj.methodOne();
+		
 	}
 
 }
