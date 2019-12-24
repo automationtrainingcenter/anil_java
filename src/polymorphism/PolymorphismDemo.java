@@ -24,6 +24,17 @@ public class PolymorphismDemo {
 		obj.add("20", 10);
 		obj.add(10, 10, "10");
 		obj.add(10, 10);
+		
+		
+		RunTimePolyParent rpObj = new RunTimePolyParent();
+		rpObj.add(10, "100");
+		
+		
+		RunTimePolyChild rcObj = new RunTimePolyChild();
+		rcObj.add(10, "100");
+		
+		RunTimePolyParent pcObj = new RunTimePolyChild();
+		pcObj.add(10, "50");
 	}
 
 }
