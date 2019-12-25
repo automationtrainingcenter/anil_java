@@ -1,5 +1,5 @@
 package finalkeyword;
 
-public class FinalClass extends FinalClassParent{
+public final class FinalClass extends FinalClassParent{
 
 }
