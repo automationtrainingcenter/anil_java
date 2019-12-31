@@ -17,5 +17,7 @@ public interface Account {
 	String getName();
 
 	String getAccnum();
+	
+	void displayBalance();
 
 }

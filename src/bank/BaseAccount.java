@@ -32,9 +32,9 @@ public class BaseAccount implements Account {
 	public String getAccnum() {
 		return accnum;
 	}
-	
+
 	public void displayBalance() {
-		System.out.println("Balance in your account is Rs. "+this.balance);
+		System.out.println("Balance in your account is Rs. " + this.balance);
 	}
 
 	@Override
@@ -59,22 +59,28 @@ public class BaseAccount implements Account {
 
 	@Override
 	public boolean validate() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("enter your pin");
-		int pin = sc.nextInt();
-		if (this.pin == pin) {
-			return true;
-		} else {
-			System.out.println("invalid pin");
-			return false;
+		if (this.pin != 0) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("enter your pin");
+			int pin = sc.nextInt();
+			if (this.pin == pin) {
+				return true;
+			} else {
+				System.out.println("invalid pin");
+			}
+		}else {
+			System.out.println("please set the pin first");
 		}
+		return false;
 	}
 
 	@Override
 	public void deposite(double amount) {
 		if (amount >= 0) {
+			System.out.println("depositing....");
 			this.balance += amount;
-		}else {
+			System.out.println("deposite successfull");
+		} else {
 			System.out.println("incorrect amount");
 		}
 
@@ -82,17 +88,17 @@ public class BaseAccount implements Account {
 
 	@Override
 	public double withdraw(double amount) {
-		if(amount >= 0) {
-			if(validate()) {
-				if(this.balance >= amount) {
+		if (amount >= 0) {
+			if (validate()) {
+				if (this.balance >= amount) {
 					this.balance -= amount;
 					System.out.println("please collect your cash");
 					return amount;
-				}else {
+				} else {
 					System.out.println("insufficient balance");
 				}
 			}
-		}else {
+		} else {
 			System.out.println("invalid amount");
 		}
 		return 0;

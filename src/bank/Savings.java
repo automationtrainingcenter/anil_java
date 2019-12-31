@@ -13,8 +13,9 @@ public class Savings extends BaseAccount{
 		if(amount >= 0) {
 			if(validate()) {
 				if(this.balance >= amount) {
+					System.out.println("withdrawing....");
 					this.balance -= amount;
-					System.out.println("please collect your cash");
+					System.out.println("Withdraw successfull\nPlease collect your cash");
 					if(this.balance < minBalance) {
 						this.balance -= 100;
 					}
