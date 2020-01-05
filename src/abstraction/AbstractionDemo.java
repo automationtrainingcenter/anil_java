@@ -35,7 +35,7 @@ import abstraction.Outer.Inner;
  * 
  * 
  * Type of interfaces
- * 
+ * Marker Interfaces or Tagged interfaces
  * 	it is an interface without any abstract methods like Serializable, Clonable .etc
  * 	Generally these interfaces provides special instructions to the JVM
  * 	we can have common parent to the multiple classes or interfaces
@@ -77,12 +77,37 @@ public class AbstractionDemo {
 		inObj.imethod();
 		
 		// if outer interface contains a method which returns inner interface object reference
-		// then we can use any one of the following two approaches
+		// then we can use any one of the following two approaches 
 		Inner innObj = oObj.method();
 		innObj.imethod();
 		
 		oObj.method().imethod();
-	}
+		
+		
+		// java 8 interface
+		Java8Interface j8Obj = new Java8Impl();
+		j8Obj.methodOne(); // abstract method
+		j8Obj.methodThree(); // default method 
+		Java8Interface.methodTwo(); // static method
+		
+		
+		// functional interface implemented by a normal java class
+		FuncInterface fnor = new FuncInterfaceImpl();
+		fnor.methodOne();
+		
+		// functional interface implemented by an anonymous class
+		FuncInterface fanon = new FuncInterface() {
+
+			@Override
+			public void methodOne() {
+				System.out.println("FuncInterface method one implementation using Anonymous class");
+			}   
+			
+		};
+		fanon.methodOne();
+		
+		
+	} 
 	
 
 }
