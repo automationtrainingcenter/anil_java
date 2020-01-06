@@ -106,6 +106,9 @@ public class AbstractionDemo {
 		};
 		fanon.methodOne();
 		
+		// functional interface implementation by using a lambda expression
+		FuncInterface flam = () -> System.out.println("FuncInterface method one implementation using lambda expression");
+		flam.methodOne();
 		
 	} 
 	
