@@ -1,6 +1,7 @@
 package collections;
 
-import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /*
@@ -12,14 +13,14 @@ import java.util.List;
  * 
  * List allows duplicate values also
  * 
- * List is index based and index nubmer starts with 0
+ * List is index based and index number starts with 0
  */
 
 public class ListDemo {
 
 	public static void main(String[] args) {
 		// create a list
-		List<String> courses = new ArrayList<>();
+		List<String> courses = new LinkedList<>();
 
 		// find the number of items in a list
 		int noi = courses.size();
@@ -56,6 +57,45 @@ public class ListDemo {
 		for(String course : courses) {
 			System.out.println(course + " --- "+ course.length());
 		}
+		
+		// retrieve all the data from the list using iterator interface
+		Iterator<String> it = courses.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next().toLowerCase());
+		}
+		
+		// insert the data into the list
+		courses.add(3, "manual");
+		System.out.println(courses);
+		
+		// update the data in a list
+		courses.set(2, "cucumber");
+		System.out.println(courses);
+		
+		
+		// delete the data from the list
+		courses.remove(2);
+		System.out.println(courses);
+		
+		courses.remove("manual");
+		System.out.println(courses);
+		
+		// search for an item with in the list
+		System.out.println("courses contains katalon "+courses.contains("katalon"));
+		
+		System.out.println("katalon is at index number "+courses.indexOf("katalon"));
+		
+		List<String> subList = courses.subList(3, 7);
+		System.out.println(subList);
+		
+		// remove all the values from the list
+		courses.clear();
+		
+		System.out.println(courses.size());
+	
+		
+		
+		
 		
 		
 		
