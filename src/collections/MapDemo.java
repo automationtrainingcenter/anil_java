@@ -72,7 +72,7 @@ public class MapDemo {
 		// delete the data from the map
 		courses.remove("flask");
 		System.out.println(courses);
-		
+		 
 		courses.remove("Java", 40);
 		System.out.println(courses);
 		
